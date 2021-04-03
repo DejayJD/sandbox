@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="809e0ed0-ada8-48fb-b0f7-4b70e3a03764" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/NameInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-machines/CodePreview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-machines/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-machines/StateMachinesApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-machines/button-state-visualization.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-machines/stateMachines.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state-machines/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stories/StateMachines.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-    </list>
+    <list default="true" id="809e0ed0-ada8-48fb-b0f7-4b70e3a03764" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617425673212</updated>
-      <workItem from="1617425675086" duration="18123000" />
+      <workItem from="1617425675086" duration="18171000" />
     </task>
     <servers />
   </component>
