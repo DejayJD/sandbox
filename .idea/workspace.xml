@@ -3,51 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="809e0ed0-ada8-48fb-b0f7-4b70e3a03764" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.storybook/preview.js" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.1db6407b6f251cb99757.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0.c1ece245.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/1.08e48cd2b295b33abac5.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/10.58b60afe35d013b05f26.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.7f35c06cd77f40a88403.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/11.7f35c06cd77f40a88403.manager.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/12.2f8d9cc3bdcfbb59dabf.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.7671826f.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.7671826f.iframe.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/4.7671826f.iframe.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.1ee68fff.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.4d5248d1e985d19512e5.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/5.4d5248d1e985d19512e5.manager.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.297d139ca80380169c9a.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.470dc7fc.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.470dc7fc.iframe.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/6.470dc7fc.iframe.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.1dd6103d8c4adf231b89.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/7.a8b56717.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/8.0c32e96f86b87a58d415.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/9.a81431d8989128c02249.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/iframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.29367623c6116c418e2c.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.6a2c81d3.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime~main.6dc65f73e5cafca6d3bf.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime~main.f989a683.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/css/main.94a430ce.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/static/css/main.94a430ce.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.0b7555aaeb5d052c07aa.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.0b7555aaeb5d052c07aa.manager.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.4794437f.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.4794437f.iframe.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vendors~main.4794437f.iframe.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state-machines/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/state-machines/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state-machines/StateMachinesApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state-machines/StateMachinesApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617425673212</updated>
-      <workItem from="1617425675086" duration="21359000" />
+      <workItem from="1617425675086" duration="22606000" />
     </task>
     <servers />
   </component>

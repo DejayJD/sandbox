@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { useMachine } from "@xstate/react";
 import { Machine } from "xstate";
 import * as Yup from "yup";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import "./stateMachines.scss";
 import { hasFormErrors, mockAPICall } from "./utils";
 
@@ -116,7 +116,9 @@ export const StateMachinesApp = () => {
       await mockAPICall(data.succeedAfter, data.cancelAfter, data.failAfter);
       sendButtonStateEvent(BUTTON_EVENTS.api.SUCCESS);
       setDisplaySuccessMessage(true);
-      setTimeout(()=>{setDisplaySuccessMessage(false)}, 2000)
+      setTimeout(() => {
+        setDisplaySuccessMessage(false);
+      }, 2000);
     } catch (e) {
       if (e === "cancelled") {
         sendButtonStateEvent(BUTTON_EVENTS.api.CANCELLED);
@@ -151,7 +153,12 @@ export const StateMachinesApp = () => {
   // Render form
   return (
     <>
-      <a href="https://github.com/DejayJD/sandbox/tree/main/src/state-machines  "><h3> Source Code </h3></a>
+      <a
+        href="https://github.com/DejayJD/sandbox/tree/main/src/state-machines"
+        target="_blank"
+      >
+        <h3> Source Code </h3>
+      </a>
       <form onSubmit={handleSubmit} className="form-container">
         <h3> Form </h3>
         <div className="triple-input-container">
