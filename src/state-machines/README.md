@@ -1,8 +1,8 @@
 # State Machines with XState
 
-[Garden Post](https://johndavidfrancis.com/state-machines-in-react)
+[Garden Blog Post](https://johndavidfrancis.com/state-machines-in-react)
 
-[See Live Demo]()
+[See Live Demo](https://johndavidfrancis.com/sandbox/state-machines)
 
 [See Code](./StateMachinesApp.js)
 

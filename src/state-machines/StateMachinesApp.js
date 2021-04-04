@@ -19,14 +19,14 @@ const BUTTON_STATES = {
 // Events sent to the state machine
 const BUTTON_EVENTS = {
   form: {
-    READY: "READY",
-    NOT_READY: "NOT_READY"
+    READY: "FORM_READY",
+    NOT_READY: "FORM_NOT_READY"
   },
   api: {
-    REQUESTED: "REQUESTED",
-    SUCCESS: "SUCCESS",
-    CANCELLED: "CANCELLED",
-    FAILED: "FAILED"
+    REQUESTED: "API_REQUESTED",
+    SUCCESS: "API_SUCCESS",
+    CANCELLED: "API_CANCELLED",
+    FAILED: "API_FAILED"
   }
 };
 
@@ -151,6 +151,7 @@ export const StateMachinesApp = () => {
   // Render form
   return (
     <>
+      <a href="https://github.com/DejayJD/sandbox/tree/main/src/state-machines  "><h3> Source Code </h3></a>
       <form onSubmit={handleSubmit} className="form-container">
         <h3> Form </h3>
         <div className="triple-input-container">
