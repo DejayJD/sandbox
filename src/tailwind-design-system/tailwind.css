@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind forms;
+
+body {
+  padding: 0;
+}
+
+@layer components {
+  .btn {
+    @apply h-12
+    px-4
+    py-2
+    bg-gray-100
+    hover:bg-gray-200
+    focus:bg-gray-300
+    font-semibold
+    rounded-lg
+    shadow-md
+    transition-all
+    focus:ring-opacity-75
+    focus:outline-none
+    focus:ring-2;
+  }
+  .btn-primary {
+    @apply
+    bg-blue-500
+    text-white
+    focus:ring-blue-400
+    focus:bg-blue-700
+    hover:bg-blue-700;
+  }
+  .btn-danger {
+    @apply bg-red-500
+    text-white
+    hover:bg-red-700
+    focus:ring-red-400;
+  }
+  .btn-secondary {
+    @apply py-2
+    bg-white
+    text-pink-600
+    border-2
+    border-pink-500
+    hover:bg-pink-100
+    focus:bg-pink-400
+    focus:text-white;
+  }
+  .twoColumnGrid {
+    @apply grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .codeView {
+    @apply bg-gray-700;
+  }
+  h1 {
+    @apply text-xl;
+  }
+
+  /* Inputs */
+  .input-wrapper {
+    @apply flex flex-col-reverse justify-end;
+  }
+  .input-element {
+    @apply border
+    border-gray-300
+    p-2
+    py-1
+    hover:border-blue-300;
+  }
+  .input-element[error] {
+    @apply border-red-500;
+  }
+  .input-element:focus ~ .input-label {
+    @apply text-black;
+  }
+  .input-label {
+    @apply transition-all
+    text-gray-500;
+  }
+  .input-error {
+    @apply text-red-500;
+  }
+}

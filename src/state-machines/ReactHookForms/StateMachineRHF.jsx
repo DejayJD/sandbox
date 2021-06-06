@@ -1,67 +1,14 @@
-import { useFormik } from "formik";
 import { useMachine } from "@xstate/react";
-import { Machine } from "xstate";
 import * as Yup from "yup";
 import { useEffect, useState } from "react";
-import "./stateMachines.scss";
-import { hasFormErrors, mockAPICall } from "./utils";
-
-// Button states for the state machine
-const BUTTON_STATES = {
-  FOCUS: "FOCUS",
-  READY: "READY",
-  LOADING: "LOADING",
-  DISABLED: "DISABLED",
-  ERROR: "ERROR",
-  CANCELLED: "CANCELLED"
-};
-
-// Events sent to the state machine
-const BUTTON_EVENTS = {
-  form: {
-    READY: "FORM_READY",
-    NOT_READY: "FORM_NOT_READY"
-  },
-  api: {
-    REQUESTED: "API_REQUESTED",
-    SUCCESS: "API_SUCCESS",
-    CANCELLED: "API_CANCELLED",
-    FAILED: "API_FAILED"
-  }
-};
-
-// Button state machine
-const buttonStateMachine = Machine({
-  id: "buttonStates",
-  initial: BUTTON_STATES.DISABLED,
-  states: {
-    [BUTTON_STATES.DISABLED]: {
-      on: { [BUTTON_EVENTS.form.READY]: BUTTON_STATES.READY }
-    },
-    [BUTTON_STATES.READY]: {
-      on: {
-        [BUTTON_EVENTS.form.NOT_READY]: BUTTON_STATES.DISABLED,
-        [BUTTON_EVENTS.api.REQUESTED]: BUTTON_STATES.LOADING
-      }
-    },
-    [BUTTON_STATES.LOADING]: {
-      on: {
-        [BUTTON_EVENTS.api.SUCCESS]: BUTTON_STATES.READY,
-        [BUTTON_EVENTS.api.CANCELLED]: BUTTON_STATES.CANCELLED,
-        [BUTTON_EVENTS.api.FAILED]: BUTTON_STATES.ERROR
-      }
-    },
-    [BUTTON_STATES.ERROR]: {
-      on: { [BUTTON_EVENTS.form.READY]: BUTTON_STATES.READY }
-    },
-    [BUTTON_STATES.CANCELLED]: {
-      on: {
-        [BUTTON_EVENTS.form.NOT_READY]: BUTTON_STATES.DISABLED,
-        [BUTTON_EVENTS.api.REQUESTED]: BUTTON_STATES.LOADING
-      }
-    }
-  }
-});
+import "../stateMachines.scss";
+import { mockAPICall } from "../utils";
+import {
+  BUTTON_STATES,
+  BUTTON_EVENTS,
+  buttonStateMachine
+} from "../machines/buttonStateMachine";
+import { useForm } from "react-hook-form";
 
 // Our button text changes depending on the button state
 const getButtonText = buttonState => {
@@ -79,6 +26,7 @@ const getButtonText = buttonState => {
   }
 };
 
+// TODO: connect all of these
 // Form values
 const initialFormValues = {
   firstName: "",
@@ -91,6 +39,7 @@ const initialFormValues = {
   failAfter: ""
 };
 
+// TODO: hook this up
 // Form Validation
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("Required"),
@@ -103,7 +52,7 @@ const validationSchema = Yup.object().shape({
 // A hacky little global render count tracker
 let renderCount = 0;
 
-export const StateMachinesApp = () => {
+export const StateMachineRHF = () => {
   renderCount += 1;
   // Set up our state machine using the hook
   const [buttonState, sendButtonStateEvent] = useMachine(buttonStateMachine);
@@ -130,36 +79,42 @@ export const StateMachinesApp = () => {
     }
   };
 
-  // Formik stuff
-  const { handleChange, handleSubmit, values, errors, touched } = useFormik({
-    initialValues: initialFormValues,
-    onSubmit: onSubmitHandler,
-    validationSchema,
-    validateOnMount: true
-  });
+  // RHF stuff
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid, isDirty }
+  } = useForm({ mode: "onBlur" });
 
   // Send events to the button state machine whenever our error state changes
   // This feels like a potential performance issue since these will be firing a lot (on any input change)
   // It could maybe be re-configured to use on blur or something
   // It definitely feels weird connecting the dots using an effect hook here, feels like a messy side effect, wonder if there's a better way?
   useEffect(() => {
-    if (!hasFormErrors(errors)) {
+    if (isValid && isDirty) {
       sendButtonStateEvent(BUTTON_EVENTS.form.READY);
     } else {
       sendButtonStateEvent(BUTTON_EVENTS.form.NOT_READY);
     }
-  }, [errors, values, sendButtonStateEvent]);
+  }, [isValid, isDirty, sendButtonStateEvent]);
 
   // Render form
   return (
     <>
+      <p style={{ fontSize: "20px", maxWidth: "700px" }}>
+        During the Formik example I noticed that in the Formik example I was
+        having lots of rerenders, mostly due to Formik sending events on every.
+        This example is to see how XState would interact with React-Hook-Form
+        which does a lot of performance optimizations by letting you decided
+        what mode to rerender on (blur/change/submit/etc).
+      </p>
       <a
         href="https://github.com/DejayJD/sandbox/tree/main/src/state-machines"
         target="_blank"
       >
         <h3> Source Code </h3>
       </a>
-      <form onSubmit={handleSubmit} className="form-container">
+      <form onSubmit={handleSubmit(onSubmitHandler)} className="form-container">
         <h3> Form </h3>
         <div className="triple-input-container">
           <div className="flex-col">
@@ -167,30 +122,27 @@ export const StateMachinesApp = () => {
               type="text"
               placeholder="First Name"
               name="firstName"
-              value={values.firstName}
-              onChange={handleChange}
+              {...register("firstName", { required: true })}
             />
-            {errors.firstName && touched.firstName && errors.firstName}
+            {errors.firstName && "first name is required"}
           </div>
           <div className="flex-col">
             <input
               type="text"
               placeholder="Middle Name"
               name="middleName"
-              value={values.middleName}
-              onChange={handleChange}
+              {...register("middleName", { required: true })}
             />
-            {errors.middleName && touched.middleName && errors.middleName}
+            {errors.middleName && "middle name is required"}
           </div>
           <div className="flex-col">
             <input
               type="text"
               placeholder="Last Name"
               name="lastName"
-              value={values.lastName}
-              onChange={handleChange}
+              {...register("lastName", { required: true })}
             />
-            {errors.lastName && touched.lastName && errors.lastName}
+            {errors.lastName && "last name is required"}
           </div>
         </div>
         <div className="flex-col">
@@ -199,27 +151,26 @@ export const StateMachinesApp = () => {
             placeholder="Phone"
             name="phoneNumber"
             maxLength={10}
-            onChange={handleChange}
+            {...register("phoneNumber", { required: true })}
           />
-          {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
+          {errors.phoneNumber && "phone number is required"}
         </div>
         <div className="flex-col">
           <input
             type="text"
             placeholder="Email"
             name="email"
-            onChange={handleChange}
+            {...register("email", { required: true })}
           />
-          {errors.email && touched.email && errors.email}
+          {errors.email && "email is required"}
         </div>
         <button
+          className={`btn ${
+            buttonState.value === BUTTON_STATES.ERROR ? "btn-danger" : "btn-primary"
+          }`}
           type="submit"
-          style={{
-            background:
-              buttonState.value === BUTTON_STATES.ERROR ? "#e24e4e82" : "white"
-          }}
           disabled={
-            buttonState.value === BUTTON_STATES.DISABLED ||
+            buttonState.value === BUTTON_STATES.NOT_READY ||
             buttonState.value === BUTTON_STATES.LOADING
           }
         >
@@ -230,33 +181,31 @@ export const StateMachinesApp = () => {
         <div className="triple-input-container">
           <div className="flex-col">
             <input
+              defaultValue={initialFormValues.succeedAfter}
               type="number"
               placeholder="Succeed After (ms)"
               name="succeedAfter"
-              value={values.succeedAfter}
-              onChange={handleChange}
+              {...register("succeedAfter")}
             />
-            {errors.succeedAfter && touched.succeedAfter && errors.succeedAfter}
+            {errors.succeedAfter && errors.succeedAfter}
           </div>
           <div className="flex-col">
             <input
               type="text"
               placeholder="Cancel After (ms)"
               name="cancelAfter"
-              value={values.cancelAfter}
-              onChange={handleChange}
+              {...register("cancelAfter")}
             />
-            {errors.cancelAfter && touched.cancelAfter && errors.cancelAfter}
+            {errors.cancelAfter && errors.cancelAfter}
           </div>
           <div className="flex-col">
             <input
               type="text"
               placeholder="Fail After (ms)"
               name="failAfter"
-              value={values.failAfter}
-              onChange={handleChange}
+              {...register("failAfter")}
             />
-            {errors.failAfter && touched.failAfter && errors.failAfter}
+            {errors.failAfter && errors.failAfter}
           </div>
         </div>
       </form>

@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="809e0ed0-ada8-48fb-b0f7-4b70e3a03764" name="Default Changelist" comment="">
+    <list default="true" id="809e0ed0-ada8-48fb-b0f7-4b70e3a03764" name="Default Changelist" comment="text-">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craco.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/convertTWtoSCTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/default-tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/exports/base-logic/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/exports/styled-components/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/exports/tailwind/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/internal/logic/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/internal/styles/sc-input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/internal/styles/tw-input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hybrid-design-system/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state-machines/DynamicForms/DynamicForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state-machines/DynamicForms/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state-machines/DynamicForms/dynamicFormUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state-machines/ReactHookForms/StateMachineRHF.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state-machines/Vanilla/VanillaFormik.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state-machines/machines/buttonStateMachine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stories/DesignSystems.stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styled-component-design-system/HybridStyledTailwindLibrary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styled-component-design-system/HybridStyledTailwindObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styled-component-design-system/StyledComponentsDS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styled-component-design-system/tokens.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tailwind-design-system/TailwindComponents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tailwind-design-system/components/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tailwind-design-system/components/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tailwind-design-system/tailwind.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/iframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/iframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.39dffe79.iframe.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NameInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state-machines/StateMachinesApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state-machines/InlineFormik/StateMachinesAppFormikInline.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state-machines/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state-machines/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/StateMachines.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/StateMachines.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
         <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
@@ -27,17 +63,30 @@
   <component name="ProjectId" id="1qe2KrtTbKZtmb29mYW4ej94NLc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/hybrid-design-system" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hybrid-design-system" />
+      <recent name="$PROJECT_DIR$/src/hybrid-design-system/tailwind" />
+      <recent name="$PROJECT_DIR$/src/hybrid-design-system/logic" />
+      <recent name="$PROJECT_DIR$/src/config-converter" />
+      <recent name="$PROJECT_DIR$/src/styled-component-design-system" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/state-machines" />
+      <recent name="$PROJECT_DIR$/src/hybrid-design-system/exports" />
+      <recent name="$PROJECT_DIR$/src/hybrid-design-system/internal" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/state-machines/vanilla" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -63,6 +112,23 @@
       <option name="presentableId" value="Default" />
       <updated>1617425673212</updated>
       <workItem from="1617425675086" duration="24387000" />
+      <workItem from="1618195554517" duration="3352000" />
+      <workItem from="1618329837386" duration="3384000" />
+      <workItem from="1618353838992" duration="886000" />
+      <workItem from="1618371319528" duration="4000" />
+      <workItem from="1618599597424" duration="1348000" />
+      <workItem from="1618679831818" duration="9532000" />
+      <workItem from="1619911459520" duration="1135000" />
+      <workItem from="1619912765821" duration="3230000" />
+      <workItem from="1620081469834" duration="299000" />
+      <workItem from="1620156496663" duration="2537000" />
+      <workItem from="1620435943884" duration="4017000" />
+      <workItem from="1620493293552" duration="16995000" />
+      <workItem from="1620847854428" duration="1602000" />
+      <workItem from="1620922083650" duration="10841000" />
+      <workItem from="1621271445451" duration="7596000" />
+      <workItem from="1622389108652" duration="1471000" />
+      <workItem from="1623007245233" duration="4131000" />
     </task>
     <servers />
   </component>
@@ -74,7 +140,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
